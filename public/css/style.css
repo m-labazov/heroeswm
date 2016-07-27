@@ -45,7 +45,7 @@ table {
   border-spacing: 0;
 }
 
-/* GENEREL STYLES */
+/*////// GENEREL STYLES //////*/
 body {
 	background: #000000 /* Цвет фона */
 	url(../image/fon.jpg) 
@@ -83,17 +83,17 @@ footer {
 
 /* Header */
 .header {
+	background: url(../image/fon_shapka.png);
 	padding: 5px 0;
-	background: rgba(66,182,114,0.9)/* Полупрозрачный фон */; 
 }
 .logo {
 	text-align: center;
 }
 .header h1 {
-	color: #990066;
+	color: #ffcc66;
 	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 0px 0px 20px #FF6;
+	text-transform: none;
+	text-shadow: 3px 2px 3px #000000;
 	font-size: 3em;
 	font-weight: bold;
 }
@@ -103,18 +103,19 @@ footer {
 	background-color: #333399 ;
 	border-top: 3px solid #ffcc66;
 	border-bottom: 3px solid #ffcc66;
-	min-height: 44px;
+	min-height: 48px;
 }
 .page-navigation li {
 	float: left;
 	width: auto;
-	padding: 0 15px 0 10px;
-	text-transform: uppercase;	
+	text-transform: uppercase;
+	text-shadow: 0px 2px 2px #000000;	
 }
 .page-navigation a {
 	display: block;
-	color: #9999cc;
-	line-height: 3em;
+	padding: 0 10px 0px 10px;
+	color: #ccccff;
+	line-height: 48px;
 	font-weight: bold;
 	text-align: center;
 }
@@ -125,23 +126,24 @@ footer {
 
 /* LOGIN FORMA */
 .login {
-	padding: 5px 0;
+	padding: 8px 8px;
 	float: right;
 }
 .login input[type="text"],
 .login input[type="password"] {
 	padding: 5px;
 	margin-right: 5px;
-	border: 1px solid transparent;
+	border: 0px solid transparent;
 	border-radius: 5px;
 	outline: none;
 }
 .login input[type="submit"] {
 	padding: 5px 15px;
-	border: 1px solid lightgrey;
+	border: 0px solid lightgrey;
 	background-color: #9999cc;
 	color: white;
 	border-radius: 5px;
+	text-shadow: 0px 2px 2px #000000;	
 }
 .login input[type="submit"]:hover,
 bottom:hover {
@@ -158,12 +160,12 @@ main {
 }
 .collection-title {
 	padding-bottom: 5px;
-	border-bottom: 2px solid #9999cc; 
-	color: #663366;
+	border-bottom: 2px solid #9999cc;
+	color: #990066;
 	font-size: 36px;
 }
 .collection-title small {
-	color: #9999cc;
+	color: #ffcc66;
 	font-size: 80%;
 }
 .collection-item-outer {
@@ -171,7 +173,7 @@ main {
 	float: left;
 	padding-left: 5px;
 	padding-right: 5px;
-	width: 33.33%;
+	width: 50%;
 	box-sizing: border-box;
 }
 .collections > div:first-child {
@@ -185,15 +187,14 @@ main {
 .collection-item {
 	border: 1px solid #959595;
 }
-.collection-item img,
-.collection-item video {
+.collection-item img {
 	width: 100%;
 }
 .collection-text {
 	padding: 0 20px 20px 20px;
 }
 .collection-text h3 {
-	color: #9999cc;
+	color: #ffcc66;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -211,8 +212,8 @@ main {
 
 /* FOOTER */
 .footer {
-	background-color: #348656;
-	color: #663366;
+	background-color: #333399;
+	color: #9999cc;
 	padding: 20px 0;
 	margin-top: 30px;
 }
