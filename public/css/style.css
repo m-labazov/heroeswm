@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*////// GENEREL STYLES //////*/
+body {
+	background: #000000 /* Цвет фона */
+	url(../image/fon.jpg) 
+	top center 
+	no-repeat 
+	fixed; 
+	font-family: Arial, San-Serif;
+	font-size: 100%;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style-type: none;
+} 
+a {
+	text-decoration: none;
+}
+p {
+	font-size: 14px;
+	line-height: 1.3em;
+}
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+header,
+nav,
+main,
+footer {
+	margin: 0 auto;
+	width: 960px;
+}
+
+/* Header */
+.header {
+	background: url(../image/fon_shapka.png);
+	padding: 5px 0;
+}
+.logo {
+	text-align: center;
+}
+.header h1 {
+	color: #ffcc66;
+	text-align: center;
+	text-transform: none;
+	text-shadow: 3px 2px 3px #000000;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+/* Navigation */
+.page-navigation {
+	background-color: #333399 ;
+	border-top: 3px solid #ffcc66;
+	border-bottom: 3px solid #ffcc66;
+	min-height: 48px;
+}
+.page-navigation li {
+	float: left;
+	width: auto;
+	text-transform: uppercase;
+	text-shadow: 0px 2px 2px #000000;	
+}
+.page-navigation a {
+	display: block;
+	padding: 0 10px 0px 10px;
+	color: #ccccff;
+	line-height: 48px;
+	font-weight: bold;
+	text-align: center;
+}
+.page-navigation li a:hover {
+	color: #ffcc66;
+	background-color: #993366;
+}
+
+/* LOGIN FORMA */
+.login {
+	padding: 8px 8px;
+	float: right;
+}
+.login input[type="text"],
+.login input[type="password"] {
+	padding: 5px;
+	margin-right: 5px;
+	border: 0px solid transparent;
+	border-radius: 5px;
+	outline: none;
+}
+.login input[type="submit"] {
+	padding: 5px 15px;
+	border: 0px solid lightgrey;
+	background-color: #9999cc;
+	color: white;
+	border-radius: 5px;
+	text-shadow: 0px 2px 2px #000000;	
+}
+.login input[type="submit"]:hover,
+bottom:hover {
+	background-color: #993366;
+	color: #FFCC66;
+}
+
+/* MAIN PART */
+main {
+	background: rgba(225,225,225,0.7); /* Цвет фона */
+}
+.collections {
+	overflow: auto;
+}
+.collection-title {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #9999cc;
+	color: #990066;
+	font-size: 36px;
+}
+.collection-title small {
+	color: #ffcc66;
+	font-size: 80%;
+}
+.collection-item-outer {
+	display: inline-block;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 50%;
+	box-sizing: border-box;
+}
+.collections > div:first-child {
+	padding-left: 0;
+	padding-right: 5px;
+}
+.collections > div:last-child {
+	padding-left: 0;
+	padding-right: 5 px;
+}
+.collection-item {
+	border: 1px solid #959595;
+}
+.collection-item img {
+	width: 100%;
+}
+.collection-text {
+	padding: 0 20px 20px 20px;
+}
+.collection-text h3 {
+	color: #ffcc66;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.collection-text p {
+	max-height: 80px;
+	overflow: hidden;	
+}
+.collection-text buttom {
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	outline: none;
+}
+
+/* FOOTER */
+.footer {
+	background-color: #333399;
+	color: #9999cc;
+	padding: 20px 0;
+	margin-top: 30px;
+}
