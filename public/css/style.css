@@ -47,12 +47,12 @@ table {
 
 /*////// GENEREL STYLES //////*/
 body {
-	background: #ffffff /* Цвет фона */
+	background: #000000 /* Цвет фона */
 	url(../image/fon.jpg) 
 	top center 
 	no-repeat 
 	fixed; 
-	font-family: Arial, San-Serif;
+	font-family: Myriad Pro, Arial;
 	font-size: 100%;
 }
 ul {
@@ -100,7 +100,7 @@ footer {
 
 /* Navigation */
 .page-navigation {
-	background-color: #333399 ;
+	background-color: #333399;
 	border-top: 3px solid #ffcc66;
 	border-bottom: 3px solid #ffcc66;
 	min-height: 48px;
@@ -123,7 +123,51 @@ footer {
 	color: #ffcc66;
 	background-color: #993366;
 }
-
+ 
+/* Menu */
+ul.dropdown li { 
+	position: relative; 
+}
+ul.dropdown,
+ul.dropdown-inside {
+	list-style-type: none;
+	padding: 0;
+}
+ul.dropdown-inside {
+	position: absolute;
+	left: -9999px;
+}
+ul.dropdown li.dropdown-top {
+	display: inline;
+	float: left;
+	margin: 0 1px 0 0;
+}
+ul.dropdown li.dropdown-top a {
+	padding: 0 10px 0px 10px;
+	display: block;
+}
+ul.dropdown a.dropdown-top { 
+	background-color: #333399;
+}
+ul.dropdown a.dropdown-top:hover { 
+	color: #ffcc66;
+	background-color: #993366;
+	border-bottom: 3px solid #ffcc66;
+	padding: 0 10px 0px 10px; 
+	}
+ul.dropdown li.dropdown-top:hover .dropdown-inside {
+	display: block;
+	left: 0;
+}
+ul.dropdown .dropdown-inside { 
+	background: #333399; 
+}
+ul.dropdown .dropdown-inside a:hover { 
+	background: #993366; 
+	border-top: 3px solid #ffcc66;
+	border-bottom: 3px solid #ffcc66;
+}
+ 
 /* LOGIN FORMA */
 .login {
 	padding: 8px 8px;
@@ -151,18 +195,55 @@ bottom:hover {
 	color: #FFCC66;
 }
 
+/* Таблица */
+.table,
+.table1,
+.table2 { 
+	background: #ccccff;
+	float: left;
+	width: 25%;
+	padding: 5px 5px 5px 5px;
+	height: 40px;
+	text-align: center;
+}
+.table3 { 
+	background:#ccccff;
+	width: avto;
+	padding: 5px 5px 5px 5px;
+	height: 40px;
+	text-align: center;
+}
+.table0,
+.table01,
+.table02 { 
+	background: #9999cc;
+	float: left;
+	width: 25%;
+	padding: 5px 5px 5px 5px;
+	height: 40px;
+	text-align: center;
+}
+.table03 { 
+	background: #9999cc;
+	width: avto;
+	padding: 5px 5px 5px 5px;
+	height: 40px;
+	text-align: center;
+}
+
 /* MAIN PART */
 main {
-	background: rgba(225,225,225,0.7); /* Цвет фона */
+	background: rgba(225,225,225,0.5); /* Цвет фона */
 }
 .collections {
 	overflow: auto;
 }
 .collection-title {
-	padding-bottom: 5px;
+	padding-bottom: 5px 0 5px 0;
 	border-bottom: 2px solid #9999cc;
 	color: #990066;
 	font-size: 36px;
+	padding: 5px 5px 5px 5px;
 }
 .collection-title small {
 	color: #ffcc66;
