@@ -80,4 +80,5 @@ class DataStorageActor extends Actor with ConfiguredContext {
    case class SaveItemTypes(itemTypes : List[ItemType])
    case class SaveItems(items: Array[MarketItem])
    case object LoadItemTypes
+   case object LoadObjects
 }
