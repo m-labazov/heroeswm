@@ -14,3 +14,4 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 #  smth
 GET     /hello                      ua.home.controller.MainController.hello
+GET     /types                      ua.home.controller.MainController.getTypes
