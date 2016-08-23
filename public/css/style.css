@@ -52,7 +52,7 @@ body {
 	top center 
 	no-repeat 
 	fixed; 
-	font-family: Myriad Pro, Arial;
+	font-family: Arial, San-Serif;
 	font-size: 100%;
 }
 ul {
@@ -239,11 +239,11 @@ main {
 	overflow: auto;
 }
 .collection-title {
-	padding-bottom: 5px 0 5px 0;
-	border-bottom: 2px solid #9999cc;
+	padding: 5px 5px 5px 5px;
 	color: #990066;
 	font-size: 36px;
-	padding: 5px 5px 5px 5px;
+	font-weight: bold;
+	text-align: center;
 }
 .collection-title small {
 	color: #ffcc66;
