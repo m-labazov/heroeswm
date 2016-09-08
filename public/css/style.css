@@ -298,3 +298,10 @@ main {
 	padding: 20px 0;
 	margin-top: 30px;
 }
+
+.category-line-template {
+	display: none;
+}
+.category-line {
+	display: block;
+}

@@ -13,7 +13,7 @@ import scalaj.http.{Http, HttpRequest, HttpResponse}
   */
 class SystemAuthTokener extends Actor {
   self ! Init
-  var token: Option[String] = Some("__utma=80519182.2134292720.1463320188.1468750711.1468766395.26; __utmz=80519182.1463320188.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); _ym_uid=1463320189383481326; hwm_reg_cache=eeb3bb172e9ea729310455d34acc04a5; hwm_reg_user_key=4bf28779f8af70baa062a6b3254b04f9; PHPSESSID=1ce47d5bc85378421da9446bf0b331f9; __utmc=80519182; _ym_isad=2; duration=18849; __lnkrntdmcvrd=-1; __utmb=80519182; pl_id=95329; sid=7998fbde1b856fcfe83678bfd9f17e73")
+  var token: Option[String] = Some("__utma=80519182.2134292720.1463320188.1469367989.1471785485.28; __utmz=80519182.1463320188.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); _ym_uid=1463320189383481326; hwm_reg_cache=eeb3bb172e9ea729310455d34acc04a5; hwm_reg_user_key=4bf28779f8af70baa062a6b3254b04f9; PHPSESSID=26ffdcda26cbd9fa2c61897268265231; __utmc=80519182; __utmb=80519182; _ym_isad=2; pl_id=95329; duration=13380; sid=74ded8444cc8aa5c1849f7d58cb2e441; l_obj_c=f77f4f5d9165a40cdbc8e1177eebd87d; l_obj=19")
   val log = Logging(context.system, this)
 
   override def receive: Receive = {

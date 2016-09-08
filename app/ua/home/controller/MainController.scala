@@ -1,11 +1,13 @@
 package ua.home.controller
 
+import java.time.LocalTime
+
 import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.event.Logging
 import com.google.inject.Inject
 import play.api.libs.concurrent.Akka
 import play.api.mvc._
-import ua.home.heroeswm.market.MarketAnalyzer.DisplayAllTypes
+import ua.home.heroeswm.market.MarketAnalyzer.{DisplayAllTypes, DisplayItems}
 import ua.home.heroeswm.market.{ActorNames, MarketAnalyzer}
 
 import scala.concurrent.duration._
@@ -13,7 +15,7 @@ import akka.pattern.ask
 import akka.util.Timeout
 import play.api.Logger
 import play.api.libs.json._
-import ua.home.heroeswm.market.model.ItemType
+import ua.home.heroeswm.market.model.{ItemType, MarketItem}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{Future, Promise}
@@ -42,7 +44,18 @@ class MainController (system: ActorSystem) extends Controller{
     }
   }
 
-  implicit val itemTypeReads : Writes[ItemType] = Writes[ItemType] { itemType => JsObject(Seq(
+  def getItems(itemType : String) = Action.async {
+    val marketAnalyzer: ActorRef = system.actorOf(Props[MarketAnalyzer])
+    for {
+      resultFuture <- marketAnalyzer ? DisplayItems(itemType)
+      result <- resultFuture.asInstanceOf[Future[List[MarketItem]]]
+    } yield {
+      Logger.error("controller: " + result toString)
+      Ok(Json.toJson(result))
+    }
+  }
+
+  implicit val itemTypeWrites : Writes[ItemType] = Writes[ItemType] { itemType => JsObject(Seq(
       "category" -> JsString(itemType.category),
       "name" -> JsString(itemType.name),
       "url" -> JsString(itemType.url)
@@ -55,22 +68,21 @@ class MainController (system: ActorSystem) extends Controller{
     )))
   }
 
-//  implicit def listWrites[T](implicit fmt: Writes[T]): Writes[List[T]] = new Writes[List[T]] {
-//    def writes(ts: List[T]) = JsArray(ts.map(t => toJson(t)(fmt)))
-//  }
+  implicit val marketItemsWrites : Writes[MarketItem] = Writes[MarketItem] { marketItem => JsObject(Seq(
+          "itemType" -> JsString(marketItem.itemType),
+          "price" -> JsNumber(marketItem.price),
+          "currentDurability" -> JsNumber(marketItem.currentDurability),
+          "lotId" -> JsNumber(marketItem.lotId),
+          "maxDurability" -> JsNumber(marketItem.maxDurability),
+          "name" -> JsString(marketItem.name),
+          "time" -> JsString(marketItem.time toString)
+    ))
+  }
 
-//  implicit object ItemTypeFormat extends Format[ItemType] {
-//    def reads(json: JsValue) : ItemType = new ItemType(
-//      (json \ "category").as[String],
-//      (json \ "name").as[String],
-//      (json \ "url").as[String]
-//    )
-//
-//    def writes(itemType: ItemType) = JsObject(Seq(
-//      "category" -> JsString(itemType.category),
-//      "name" -> JsString(itemType.name),
-//      "url" -> JsString(itemType.url)
-//    ))
-//  }
+  implicit val marketItemListFormat : Writes[List[MarketItem]] = Writes[List[MarketItem]] { list =>
+    JsObject(Map(
+      "items" -> JsArray(list.map(marketItem => Json.toJson(marketItem))
+    )))
+  }
 
 }
