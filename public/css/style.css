@@ -14,7 +14,7 @@ ul {
 }
 ul li {
 	list-style-type: none;
-} 
+}
 a {
 	text-decoration: none;
 }
@@ -40,8 +40,8 @@ nav {
 /* Header */
 .header {
 	background: url(../image/fon_shapka.png)
-	top center 
-	no-repeat; 
+	top center
+	no-repeat;
 	padding: 5px 0;
 }
 .logo {
@@ -68,7 +68,7 @@ nav {
 	width: auto;
 	text-transform: uppercase;
 	line-height: 1.7em;
-	text-shadow: 0px 2px 2px #000000;	
+	text-shadow: 0px 2px 2px #000000;
 }
 .page-navigation a {
 	display: block;
@@ -82,21 +82,24 @@ nav {
 	color: #ffcc66;
 	background-color: #993366;
 }
- 
+
 /* Menu */
-ul.dropdown li { 
-	position: relative; 
+ul.dropdown li {
+	position: relative;
 }
 ul.dropdown,
 ul.dropdown-inside {
 	list-style-type: none;
 	padding: 0;
 }
+#dropdownSubCategories {
+	/*display: none;*/
+}
 ul.dropdown-inside {
 	position: absolute;
 	left: -9999px;
 	color: #ccccff;
-	margin: 5px 5px 5px 0;
+	margin: 0px 5px 5px 0;
 	padding: 10px 10px 10px 10px;
 	text-align: left;
 	text-transform: none;
@@ -110,28 +113,28 @@ ul.dropdown li.dropdown-top a {
 	padding: 0 10px 0px 10px;
 	display: block;
 }
-ul.dropdown a.dropdown-top { 
+ul.dropdown a.dropdown-top {
 	background-color: #333399;
 }
-ul.dropdown a.dropdown-top:hover { 
+ul.dropdown a.dropdown-top:hover {
 	color: #ffcc66;
 	background-color: #993366;
 	border-bottom: 2px solid #ffcc66;
-	padding: 0 10px 0px 10px; 
+	padding: 0 10px 0px 10px;
 	}
 ul.dropdown li.dropdown-top:hover .dropdown-inside {
 	display: block;
 	left: 0;
 }
-ul.dropdown .dropdown-inside { 
-	background: #333399; 
+ul.dropdown .dropdown-inside {
+	background: #333399;
 }
-ul.dropdown .dropdown-inside a:hover { 
-	background: #993366; 
+ul.dropdown .dropdown-inside a:hover {
+	background: #993366;
 	border-top: 2px solid #ffcc66;
 	border-bottom: 2px solid #ffcc66;
 }
- 
+
 /* LOGIN FORMA */
 .login {
 	padding: 8px 8px;
@@ -161,7 +164,7 @@ bottom:hover {
 /* Таблица */
 .table,
 .table1,
-.table2 { 
+.table2 {
 	background: #ccccff;
 	float: left;
 	width: 25%;
@@ -169,7 +172,7 @@ bottom:hover {
 	height: 20px;
 	text-align: center;
 }
-.table3 { 
+.table3 {
 	background:#ccccff;
 	width: avto;
 	padding: 5px 5px 5px 5px;
@@ -178,7 +181,7 @@ bottom:hover {
 }
 .table0,
 .table01,
-.table02 { 
+.table02 {
 	background: #9999cc;
 	float: left;
 	width: 25%;
@@ -186,7 +189,7 @@ bottom:hover {
 	height: 20px;
 	text-align: center;
 }
-.table03 { 
+.table03 {
 	background: #9999cc;
 	width: avto;
 	padding: 5px 5px 5px 5px;
@@ -246,7 +249,7 @@ main {
 }
 .collection-text p {
 	max-height: 80px;
-	overflow: hidden;	
+	overflow: hidden;
 }
 .collection-text buttom {
 	padding: 10px;
@@ -265,6 +268,16 @@ main {
 
 .category-line-template {
 	display: none;
+}
+/*.category-line-template:hover {*/
+
+/*}*/
+.sub-category-container-hidden {
+	display:none;
+}
+.sub-category-container {
+	display:block;
+	background-color: white;
 }
 .category-line {
 	display: block;

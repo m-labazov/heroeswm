@@ -26,9 +26,6 @@
 				<ul class="dropdown">
                      <li class="dropdown-top">
                      <a class="dropdown-top" href="/">Выбор категории ▶</a>
-                         <ul class="dropdown-inside">
-                             <li class="dropdown-top"><a href="/">Название категория 1 ▶</a></li>
-                             <li><a class="dropdown-top" href="/">Название категория 2 ▶</a></li>
                          <ul id="categoryList" class="dropdown-inside">
                              <!--<li><a href="/">Название категория 1</a></li>
                              <li><a href="/">Название категория 2</a></li>
@@ -36,8 +33,12 @@
                              <li><a href="/">Название категория 4</a></li>
                              -->
                          </ul>
+                         <ul id="dropdownSubCategories" class="dropdown-inside-sub">
+                             <!--<li class="dropdown-top"><a href="/">Название категория 1 ▶</a></li>-->
+                             <!--<li><a class="dropdown-top" href="/">Название категория 2 ▶</a></li>-->
+                         </ul>
                      </li>
-                 </ul>	
+                 </ul>
             </ul>
 
 			<!--Login forma-->
@@ -51,6 +52,9 @@
 	<!--/Menu-->
     <div id="categoryLineTemplate" class="category-line-template"></div>
 	<!--Main section-->
+
+    <div id="subCategoryContainer" class="sub-category-container-hidden">
+    </div>
 	<main>
 		<div class="container">
        	  <h2 class="collection-title">Все артефакты. <small>Цена покупки</small></h2>
